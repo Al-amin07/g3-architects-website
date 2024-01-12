@@ -9,20 +9,35 @@
 }
 header{
     background-color: #FFF4E7;
+    padding: 50px 0;
 }
 .width{
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 /* Nav Ber
 ***********/
+section{
+    margin-top: 100px;
+
+}
+.primary{
+    font-size: 18px;
+    color: white;
+    padding: 20px 25px;
+    background-color: #FF900E;
+    border: 0;
+    border-radius: 10px;
+}
+.primary:hover{
+    background-color: orangered;
+}
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 0;
+    
 }
 
 nav h1{
@@ -40,6 +55,71 @@ nav li a{
     text-decoration: none;
     color: black;
 }
+/* Banner Section */
+.banner{
+  text-align: center;
+}
+.banner-container{
+   width: 75%;
+   margin: 0 auto;
+   margin-bottom: 40px;
+}
+.banner-img img{
+    width: 100%;
+}
+.banner-title{
+    font-size: 4rem;
+    padding: 0 60px;
+    
+}
+.desc{
+    line-height: 26px;
+    color: #727272;
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+/* Featured Section
+*********************/
+.img-container{
+    
+}
+#featured-desc{
+    text-align: left;
+}
+.featured-img-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    
+}
+.featured-img-container div img{
+    width: 100%;
+    
+}
+.featured-img-container div{
+    
+    
+}
+.featured-text-title{
+    font-size: 2.6rem;
+    font-weight: bold;
+    
+}
+.feature{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.feature > div{
+    flex: 1;
+}
+
+
+/* For Mobile
+***************/
+
 @media screen and (max-width:576px) {
     .width{
         width: 90%;
@@ -48,12 +128,40 @@ nav li a{
         flex-direction: column;
       gap: 10px;
     }
+    .banner-title{
+        padding: 0;
+        font-size: 3.5rem;
+    }
+    .banner-container{
+        width: 100%;
+    }
+    .feature{
+        flex-direction: column-reverse;
+    }
+    .featured-img-container{
+        grid-template-columns: 1fr;
+    }
+
 }
+
+/* For Tablet
+***************/
+
 @media screen and (min-width:577px) and (max-width:992px) {
     .width{
         width: 90%;
     }
     nav ul{
         gap: 20px;
+    }
+    .banner-container{
+        width: 100%;
+    }
+    .banner-title{
+        padding: 0;
+        font-size: 3.5rem;
+    }
+    .feature{
+        flex-direction: column-reverse;
     }
 }
