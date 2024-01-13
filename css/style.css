@@ -72,10 +72,13 @@ nav li a{
     padding: 0 60px;
     
 }
+.banner-container p{
+    margin: 20px 0 30px 0;
+}
 .desc{
     line-height: 26px;
     color: #727272;
-    margin: 20px 0 30px 0;
+   
     text-align: center;
 }
 
@@ -86,6 +89,7 @@ nav li a{
 }
 #featured-desc{
     text-align: left;
+    margin: 24px 0 32px 0;
 }
 .featured-img-container{
     width: 100%;
@@ -102,7 +106,7 @@ nav li a{
     
     
 }
-.featured-text-title{
+.text-title{
     font-size: 2.6rem;
     font-weight: bold;
     
@@ -116,6 +120,115 @@ nav li a{
     flex: 1;
 }
 
+/* Details Section
+********************/
+.details{
+    
+   display: flex;
+   
+   gap: 50px;
+  
+   
+}
+.details > div{
+    flex: 1;
+}
+
+.details-img-container img{
+    width: 100%;
+    height: 90%;
+  
+}
+.details-text-container p{
+    text-align: left;
+}
+.details-text-container-desc{
+    margin-top: 24px;
+    line-height: 26px
+}
+.sub-container{
+    padding: 30px;
+    box-shadow: 1px 1px 4px black;
+    border-radius: 10px;
+    margin: 20px 0
+}
+.sub-container:hover{
+    border: 1px solid;
+}
+.sub-container-desc{
+    margin-top:5px ;
+}
+.sub-container h1{
+    font-size: 20px;
+}
+.details-text-title{
+    width: 80%;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+/* Fact Section
+******************/
+#facts-desc{
+    margin: 24px 0 50px 0;
+    text-align: left;
+    width: 70%;
+}
+.fact-container{
+    text-align: center;
+    border: 1px solid #FF900E;
+    border-radius: 10px;
+    padding: 30px;
+    
+}
+.facts-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.fact-container .fact-title{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+}
+/* Sponspors Section
+**********************/
+.sponspors{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.sponspors-text{
+    width: 60%;
+    margin: 0 auto;
+}
+.spons-img img {
+    width: 100px;
+    height: 50px;
+}
+.spons-img{
+    display: flex;
+ justify-content: space-between;
+ margin-top: 50px;
+}
+.sponspors-text-desc{
+    margin-top: 20px;
+}
+
+/* Footer
+
+************/
+footer{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF4E7;
+   
+}
+#foot{
+    margin-bottom: 150px;
+    
+    text-align: center;
+    padding: 40px;
+}
 
 /* For Mobile
 ***************/
@@ -141,7 +254,33 @@ nav li a{
     .featured-img-container{
         grid-template-columns: 1fr;
     }
+    .details{
+        flex-direction: column;
+    }
+    .facts-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
 
+    }
+     .fact-container{
+        width: 80%;
+       
+     }
+     .sponspors-text{
+        width: 90%;
+     }
+     .spons-img{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+     }
+     .spons-img img{
+        width: 50%;
+     }
+     footer{
+        width: 90%;
+     }
 }
 
 /* For Tablet
@@ -164,4 +303,26 @@ nav li a{
     .feature{
         flex-direction: column-reverse;
     }
+    .details{
+        flex-direction: column;
+    }
+    .sub-details{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+     .facts-container > div{
+        width: 35%;
+        
+    }
+    .facts-container{
+        flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         
+        gap: 30px;
+    } 
+    footer{
+        width: 90%;
+     }
 }
